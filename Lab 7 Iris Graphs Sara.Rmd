@@ -18,10 +18,12 @@ View(iris)
 ```{r}
 
 lvw <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width))+
-  geom_point(aes(fill = Species)) +
+  geom_point(aes(color = Species)) +
   scale_fill_manual(breaks  = c("setosa", "versicolor", "virginica"), 
                     values = c("cyan4", "dodgerblue4", "seagreen4")) +
-  theme_classic()
+  theme_classic()+
+  labs(x = "Petal Length Test Label", y = "Petal Width Test Label")+
+  facet_wrap(~Species)
 
 lvw
 
