@@ -1,0 +1,16 @@
+---
+title: "Lab 7 Iris Graphs"
+author: "Sara Orofino"
+date: "11/13/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo = FALSE}
+library(tidyverse)
+View(iris)
+```
+
