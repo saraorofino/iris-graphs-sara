@@ -14,3 +14,12 @@ library(tidyverse)
 View(iris)
 ```
 
+```{r}
+
+lvw <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width))+
+  geom_point()
+
+lvw
+
+```
+
