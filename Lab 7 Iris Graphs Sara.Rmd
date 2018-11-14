@@ -11,13 +11,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r, echo = FALSE}
 library(tidyverse)
+library(RColorBrewer)
 View(iris)
 ```
 
 ```{r}
 
 lvw <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width))+
-  geom_point()
+  geom_point(aes(fill = Species)) +
+  scale_fill_manual(breaks  = c("setosa", "versicolor", "virginica"), 
+                    values = c("cyan4", "dodgerblue4", "seagreen4")) +
+  theme_classic()
 
 lvw
 
